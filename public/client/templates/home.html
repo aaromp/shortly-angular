@@ -1,5 +1,6 @@
 Search : <input ng-model='search'></input>
-<div class='info' ng-repeat="link in links | filter:search | orderBy:'-visits'">
+Sort By: <a href="" ng-click="predicate='-visits'">Popularity</a> | <a href="" ng-click="predicate='url'">Alphabetical by URL</a> | <a href="" ng-click="predicate='-created_at'">Newest</span>
+<div class='info' ng-repeat="link in links | filter:search | orderBy:predicate">
   <div class='link'>
     <img src='/redirect_icon.png'/>
     <div class='visits'><span class='count'>{{ link.visits }}</span>Visits</div>

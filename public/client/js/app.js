@@ -17,6 +17,7 @@ angular.module('Shortly',['ngRoute'])
   })
 
 .controller('ShowLinksController', function($scope, $http) {
+  $scope.predicate='-visits';
   $http({method: 'GET', url: '/links'})
     .success(function(data, status, headers, config) {
       $scope.links = data;

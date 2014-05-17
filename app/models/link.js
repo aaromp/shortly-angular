@@ -6,7 +6,8 @@ var LinkSchema = new db.Schema({
   base_url: {type: String},
   code: {type: String},
   title: {type: String},
-  visits: {type: Number, default: 0}
+  visits: {type: Number, default: 0},
+  created_at: {type: Date, default: Date.now }
 });
 
 LinkSchema.pre('save', function(next) {
