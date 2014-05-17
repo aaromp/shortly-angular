@@ -1,5 +1,7 @@
-<form ng-submit='submit()'>
-  <input class='text' ng-model='url' type='text' name='url'>
+<form name="urlForm" ng-submit='submit()'>
+  <input class='text' ng-model='url' type='input' typing-limit="500" name='url' novalidation ng-pattern='{{ validUrl }}'>
+  <span class="error" ng-show="urlForm.url.$invalid">
+      Please enter a valid URL</span><br>
   <input type='submit' value='Shorten'>
 </form>
 <img class='spinner' src='/spiffygif_46x46.gif'>

@@ -1,4 +1,4 @@
-<div class='info' ng-repeat="link in links">
+<div class='info' ng-repeat="link in links | orderBy:'-visits'">
   <div class='link'>
     <img src='/redirect_icon.png'/>
     <div class='visits'><span class='count'>{{ link.visits }}</span>Visits</div>
