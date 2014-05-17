@@ -1,4 +1,5 @@
-<div class='info' ng-repeat="link in links | orderBy:'-visits'">
+Search : <input ng-model='search'></input>
+<div class='info' ng-repeat="link in links | filter:search | orderBy:'-visits'">
   <div class='link'>
     <img src='/redirect_icon.png'/>
     <div class='visits'><span class='count'>{{ link.visits }}</span>Visits</div>
